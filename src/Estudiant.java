@@ -8,8 +8,6 @@ public class Estudiant extends Persona {
 
     public double obtenerNotaMaxima(List<Double> notas) {
         double max = 0;
-
-
         for(double str : this.notas) {
             if (str > max) {
                 max = str;
@@ -56,6 +54,6 @@ public class Estudiant extends Persona {
     }
 
     public String obtenirDades() throws Exception {
-        return super.obtenirDades()  + " que te nota maxima de " + obtenerNotaMaxima(this.notas) + " Nota minima de  " + obtenerNotaMinima(this.notas) +" Nota Mitja " + String.format("%.3f", obtenerNotaMitjana(this.notas));
+        return "Estudiant" + super.obtenirDades()  + " que te nota maxima de " + obtenerNotaMaxima(this.notas) + " Nota minima de  " + obtenerNotaMinima(this.notas) +" Nota Mitja " + String.format("%.3f", obtenerNotaMitjana(this.notas));
     }
 }

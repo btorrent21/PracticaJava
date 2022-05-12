@@ -5,14 +5,15 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Institut ins = new Institut("Institut La Guineueta");
+        String dades = ins.imprimirInformacio();
+        System.out.println(dades);
 
         Persona P1 = new Persona();
     
         P1.canviarNom("Bernat Torrent");
         P1.canviarDni("78347294P");
-    
         String Dades = P1.obtenirDades();
-        System.out.println(Dades);
+        System.out.println("Persona" + Dades);
 
         Estudiant E = new Estudiant();
         E.posarNota(7);
@@ -32,7 +33,7 @@ public class App {
         P.canviarNom("Oriol");
         P.canviarDni("56126245L");
         Dades = P.obtenirDades();
-        System.out.println(Dades);
+        System.out.println("Profesor" + Dades);
 
         ProfessorSubstitut PS = new ProfessorSubstitut();
         Date dataInici = new Date(2022, 3, 8);

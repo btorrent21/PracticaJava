@@ -14,7 +14,7 @@ public class Persona {
         if (this.dni == null) {
             this.dni = dni;
         } else {
-            throw new Exception("Error, el DNI no es pot canviar lo sentimos");
+            throw new Exception("Error, el DNI no es pot canviar, ho sentim");
         }
     }
 
@@ -22,6 +22,6 @@ public class Persona {
         if (dni == null || nom == null ) {
             throw new Exception("Hi ha hagut un error al obtenir les Dades");
         }
-        return "Persona que es diu " + nom + " Amb dni: " + dni;
+        return " que es diu " + nom + " Amb dni: " + dni;
     }
 }
