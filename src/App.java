@@ -1,24 +1,48 @@
+import java.lang.reflect.Array;
+import java.util.Date;
+
 public class App {
     public static void main(String[] args) throws Exception {
+
+        Institut ins = new Institut("Institut La Guineueta");
+
+        Persona P1 = new Persona();
     
-        Profesor p1 = new Profesor();
-        p1.canviarSou(2000);
-       //p1.canviarNom("Marc");
-        //String dades = p1.obtenirDades();
-        //System.out.println(dades);
+        P1.canviarNom("Bernat Torrent");
+        P1.canviarDni("78347294P");
+    
+        String Dades = P1.obtenirDades();
+        System.out.println(Dades);
 
-        
-        //Profesor p2 = new ProfessorSubstitut();
-        //p2.canviarNom("Albert");
-        //dades = p2.obtenirDades();
-        //System.out.println(dades);
+        Estudiant E = new Estudiant();
+        E.posarNota(7);
+        E.posarNota(3);
+        E.posarNota(7);
+        E.posarNota(6);
+        E.posarNota(10);
+        E.posarNota(4);
+        E.posarNota(8);
+        E.canviarNom("Guillem");
+        E.canviarDni("72931934M");
+        Dades = E.obtenirDades();
+        System.out.println(Dades);
 
-        Estudiant e = new Estudiant();
-        e.posarNota(7.5);
-        e.canviarNom("Manel");
-        e.assignarDni("46419187N");
-        //dades = e.obtenirDades();
-        //System.out.println(dades);
-        System.out.println();
+        Profesor P = new Profesor();
+        P.canviarSou(2600);
+        P.canviarNom("Oriol");
+        P.canviarDni("56126245L");
+        Dades = P.obtenirDades();
+        System.out.println(Dades);
+
+        ProfessorSubstitut PS = new ProfessorSubstitut();
+        Date dataInici = new Date(2022, 3, 8);
+        Date dataFi = new Date(2022, 5, 22);
+        PS.assignarSubstitucio(dataInici ,dataFi);
+        PS.canviarSou(1200);
+        PS.canviarDni("53264181Y");
+        PS.canviarNom("Marc");
+        PS.obtenirDades();
+        Dades = PS.obtenirDades();
+        System.out.println(Dades);
     }
 }

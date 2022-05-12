@@ -1,5 +1,4 @@
-public class Profesor {
-
+public class Profesor extends Persona {
     private double sou;
 
     public void canviarSou (double sou) throws Exception{
@@ -10,4 +9,10 @@ public class Profesor {
             this.sou = sou; 
         }
     }
+
+    public String obtenirDades() throws Exception {
+
+        return super.obtenirDades() + " amb nou sou " + sou;
+    }
+
 }
